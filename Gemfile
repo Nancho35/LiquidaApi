@@ -5,6 +5,7 @@ ruby '2.5.5'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'pg'
+gem 'rack-cors', require: 'rack/cors'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use Puma as the app server
