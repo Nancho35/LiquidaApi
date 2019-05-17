@@ -1,0 +1,141 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Liquidaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha ini</th>
+      <th>Fecha fin</th>
+      <th>Cargo</th>
+      <th>Contrato</th>
+      <th>Termina</th>
+      <th>Salario</th>
+      <th>Auxilio</th>
+      <th>Horas ex diur</th>
+      <th>Horas ex noc</th>
+      <th>Recargos noc</th>
+      <th>Domi ordinarios</th>
+      <th>Horas ex domi diur</th>
+      <th>Horas ex domi noc</th>
+      <th>Otros</th>
+      <th>Concepto otros</th>
+      <th>Sueldo promedio</th>
+      <th>Prima extra</th>
+      <th>Valor mes</th>
+      <th>Valor día float</th>
+      <th>Valor hora</th>
+      <th>Recargo nocturno</th>
+      <th>Hora extra diurna</th>
+      <th>Hora extra nocturna</th>
+      <th>Hora ordinaria dominical</th>
+      <th>Hora extra dominical diurna</th>
+      <th>Hora extra dominical nocturna</th>
+      <th>Fecha ini vacas</th>
+      <th>Fecha fin vacas</th>
+      <th>Vacaciones</th>
+      <th>Indemniza art65</th>
+      <th>Indemniza art64</th>
+      <th>Calc art64</th>
+      <th>Check65</th>
+      <th>Fecha ini pactada</th>
+      <th>Fecha fin pactada</th>
+      <th>Num pro</th>
+      <th>Fecha ini pro1</th>
+      <th>Date</th>
+      <th>Fecha ini pro2</th>
+      <th>Fecha ini pro3</th>
+      <th>Fecha ini pro4</th>
+      <th>Fecha fin pro1</th>
+      <th>Fecha fin pro2</th>
+      <th>Fecha fin pro3</th>
+      <th>Fecha fin pro4</th>
+      <th>Fecha ini presta</th>
+      <th>Fecha fin presta</th>
+      <th>Cesantias</th>
+      <th>Inte cesantias</th>
+      <th>Prima</th>
+      <th>Total prestaciones</th>
+      <th>Sueldo pendiente</th>
+      <th>Aux pendiente</th>
+      <th>Reajuste pendiente</th>
+      <th>Otros pendiente</th>
+      <th>Total pendiente</th>
+      <th>Nombres</th>
+      <th>Correo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @liquidacions.each do |liquidacion| %>
+      <tr>
+        <td><%= liquidacion.fecha_ini %></td>
+        <td><%= liquidacion.fecha_fin %></td>
+        <td><%= liquidacion.cargo %></td>
+        <td><%= liquidacion.contrato %></td>
+        <td><%= liquidacion.termina %></td>
+        <td><%= liquidacion.salario %></td>
+        <td><%= liquidacion.auxilio %></td>
+        <td><%= liquidacion.horas_ex_diur %></td>
+        <td><%= liquidacion.horas_ex_noc %></td>
+        <td><%= liquidacion.recargos_noc %></td>
+        <td><%= liquidacion.domi_ordinarios %></td>
+        <td><%= liquidacion.horas_ex_domi_diur %></td>
+        <td><%= liquidacion.horas_ex_domi_noc %></td>
+        <td><%= liquidacion.otros %></td>
+        <td><%= liquidacion.concepto_otros %></td>
+        <td><%= liquidacion.sueldo_promedio %></td>
+        <td><%= liquidacion.prima_extra %></td>
+        <td><%= liquidacion.valor_mes %></td>
+        <td><%= liquidacion.valor_dia_float %></td>
+        <td><%= liquidacion.valor_hora %></td>
+        <td><%= liquidacion.recargo_nocturno %></td>
+        <td><%= liquidacion.hora_extra_diurna %></td>
+        <td><%= liquidacion.hora_extra_nocturna %></td>
+        <td><%= liquidacion.hora_ordinaria_dominical %></td>
+        <td><%= liquidacion.hora_extra_dominical_diurna %></td>
+        <td><%= liquidacion.hora_extra_dominical_nocturna %></td>
+        <td><%= liquidacion.fecha_ini_vacas %></td>
+        <td><%= liquidacion.fecha_fin_vacas %></td>
+        <td><%= liquidacion.vacaciones %></td>
+        <td><%= liquidacion.indemniza_art65 %></td>
+        <td><%= liquidacion.indemniza_art64 %></td>
+        <td><%= liquidacion.calc_art64 %></td>
+        <td><%= liquidacion.check65 %></td>
+        <td><%= liquidacion.fecha_ini_pactada %></td>
+        <td><%= liquidacion.fecha_fin_pactada %></td>
+        <td><%= liquidacion.num_pro %></td>
+        <td><%= liquidacion.fecha_ini_pro1 %></td>
+        <td><%= liquidacion.date %></td>
+        <td><%= liquidacion.fecha_ini_pro2 %></td>
+        <td><%= liquidacion.fecha_ini_pro3 %></td>
+        <td><%= liquidacion.fecha_ini_pro4 %></td>
+        <td><%= liquidacion.fecha_fin_pro1 %></td>
+        <td><%= liquidacion.fecha_fin_pro2 %></td>
+        <td><%= liquidacion.fecha_fin_pro3 %></td>
+        <td><%= liquidacion.fecha_fin_pro4 %></td>
+        <td><%= liquidacion.fecha_ini_presta %></td>
+        <td><%= liquidacion.fecha_fin_presta %></td>
+        <td><%= liquidacion.cesantias %></td>
+        <td><%= liquidacion.inte_cesantias %></td>
+        <td><%= liquidacion.prima %></td>
+        <td><%= liquidacion.total_prestaciones %></td>
+        <td><%= liquidacion.sueldo_pendiente %></td>
+        <td><%= liquidacion.aux_pendiente %></td>
+        <td><%= liquidacion.reajuste_pendiente %></td>
+        <td><%= liquidacion.otros_pendiente %></td>
+        <td><%= liquidacion.total_pendiente %></td>
+        <td><%= liquidacion.nombres %></td>
+        <td><%= liquidacion.correo %></td>
+        <td><%= link_to 'Show', liquidacion %></td>
+        <td><%= link_to 'Edit', edit_liquidacion_path(liquidacion) %></td>
+        <td><%= link_to 'Destroy', liquidacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Liquidacion', new_liquidacion_path %>

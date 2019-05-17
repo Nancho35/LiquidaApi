@@ -1,0 +1,307 @@
+<%= form_with(model: liquidacion, local: true) do |form| %>
+  <% if liquidacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(liquidacion.errors.count, "error") %> prohibited this liquidacion from being saved:</h2>
+
+      <ul>
+      <% liquidacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fecha_ini %>
+    <%= form.date_select :fecha_ini %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin %>
+    <%= form.date_select :fecha_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_area :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contrato %>
+    <%= form.text_area :contrato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :termina %>
+    <%= form.text_area :termina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario %>
+    <%= form.text_field :salario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :auxilio %>
+    <%= form.text_field :auxilio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horas_ex_diur %>
+    <%= form.number_field :horas_ex_diur %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horas_ex_noc %>
+    <%= form.number_field :horas_ex_noc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recargos_noc %>
+    <%= form.number_field :recargos_noc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :domi_ordinarios %>
+    <%= form.number_field :domi_ordinarios %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horas_ex_domi_diur %>
+    <%= form.number_field :horas_ex_domi_diur %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horas_ex_domi_noc %>
+    <%= form.number_field :horas_ex_domi_noc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :otros %>
+    <%= form.text_field :otros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :concepto_otros %>
+    <%= form.text_area :concepto_otros %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sueldo_promedio %>
+    <%= form.text_field :sueldo_promedio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prima_extra %>
+    <%= form.text_field :prima_extra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_mes %>
+    <%= form.text_field :valor_mes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_día_float %>
+    <%= form.text_field :valor_dia_float %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor_hora %>
+    <%= form.text_field :valor_hora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recargo_nocturno %>
+    <%= form.text_field :recargo_nocturno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_extra_diurna %>
+    <%= form.text_field :hora_extra_diurna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_extra_nocturna %>
+    <%= form.text_field :hora_extra_nocturna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_ordinaria_dominical %>
+    <%= form.text_field :hora_ordinaria_dominical %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_extra_dominical_diurna %>
+    <%= form.text_field :hora_extra_dominical_diurna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_extra_dominical_nocturna %>
+    <%= form.text_field :hora_extra_dominical_nocturna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_vacas %>
+    <%= form.date_select :fecha_ini_vacas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_vacas %>
+    <%= form.date_select :fecha_fin_vacas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vacaciones %>
+    <%= form.text_field :vacaciones %>
+  </div>
+
+  <div class="field">
+    <%= form.label :indemniza_art65 %>
+    <%= form.text_field :indemniza_art65 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :indemniza_art64 %>
+    <%= form.text_field :indemniza_art64 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :calc_art64 %>
+    <%= form.text_field :calc_art64 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :check65 %>
+    <%= form.check_box :check65 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_pactada %>
+    <%= form.date_select :fecha_ini_pactada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_pactada %>
+    <%= form.date_select :fecha_fin_pactada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num_pro %>
+    <%= form.text_field :num_pro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_pro1 %>
+    <%= form.text_field :fecha_ini_pro1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_pro2 %>
+    <%= form.date_select :fecha_ini_pro2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_pro3 %>
+    <%= form.date_select :fecha_ini_pro3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_pro4 %>
+    <%= form.date_select :fecha_ini_pro4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_pro1 %>
+    <%= form.date_select :fecha_fin_pro1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_pro2 %>
+    <%= form.date_select :fecha_fin_pro2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_pro3 %>
+    <%= form.date_select :fecha_fin_pro3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_pro4 %>
+    <%= form.date_select :fecha_fin_pro4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini_presta %>
+    <%= form.date_select :fecha_ini_presta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin_presta %>
+    <%= form.date_select :fecha_fin_presta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cesantias %>
+    <%= form.text_field :cesantias %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inte_cesantias %>
+    <%= form.text_field :inte_cesantias %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prima %>
+    <%= form.text_field :prima %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_prestaciones %>
+    <%= form.text_field :total_prestaciones %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sueldo_pendiente %>
+    <%= form.text_field :sueldo_pendiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aux_pendiente %>
+    <%= form.text_field :aux_pendiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reajuste_pendiente %>
+    <%= form.text_field :reajuste_pendiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :otros_pendiente %>
+    <%= form.text_field :otros_pendiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_pendiente %>
+    <%= form.text_field :total_pendiente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombres %>
+    <%= form.text_area :nombres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_area :correo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

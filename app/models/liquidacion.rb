@@ -1,0 +1,2 @@
+class Liquidacion < ApplicationRecord
+end
