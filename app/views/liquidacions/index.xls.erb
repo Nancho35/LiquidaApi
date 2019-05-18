@@ -1,76 +1,66 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Historico liquidaciones</h1>
-<%= link_to image_tag("xls.png"), liquidacions_path(format: "xls") %>
-<%= link_to 'XLS ', liquidacions_path(format: "xls") %>
-<table class="table table-striped table-bordered table-hover table-sm ">
-  <thead>
-    <tr>
-      <th>Fecha ini</th>
-      <th>Fecha fin</th>
-      <th>Cargo</th>
-      <th>Contrato</th>
-      <th>Termina</th>
-      <th>Salario</th>
-      <th>Auxilio</th>
-      <th>Horas ex diur</th>
-      <th>Horas ex noc</th>
-      <th>Recargos noc</th>
-      <th>Domi ordinarios</th>
-      <th>Horas ex domi diur</th>
-      <th>Horas ex domi noc</th>
-      <th>Otros</th>
-      <th>Concepto otros</th>
-      <th>Sueldo promedio</th>
-      <th>Prima extra</th>
-      <th>Valor mes</th>
-      <th>Valor día float</th>
-      <th>Valor hora</th>
-      <th>Recargo nocturno</th>
-      <th>Hora extra diurna</th>
-      <th>Hora extra nocturna</th>
-      <th>Hora ordinaria dominical</th>
-      <th>Hora extra dominical diurna</th>
-      <th>Hora extra dominical nocturna</th>
-      <th>Fecha ini vacas</th>
-      <th>Fecha fin vacas</th>
-      <th>Vacaciones</th>
-      <th>Indemniza art65</th>
-      <th>Indemniza art64</th>
-      <th>Calc art64</th>
-      <th>Check65</th>
-      <th>Fecha ini pactada</th>
-      <th>Fecha fin pactada</th>
-      <th>Num pro</th>
-      <th>Fecha ini pro1</th>
-      <th>Date</th>
-      <th>Fecha ini pro2</th>
-      <th>Fecha ini pro3</th>
-      <th>Fecha ini pro4</th>
-      <th>Fecha fin pro1</th>
-      <th>Fecha fin pro2</th>
-      <th>Fecha fin pro3</th>
-      <th>Fecha fin pro4</th>
-      <th>Fecha ini presta</th>
-      <th>Fecha fin presta</th>
-      <th>Cesantias</th>
-      <th>Inte cesantias</th>
-      <th>Prima</th>
-      <th>Total prestaciones</th>
-      <th>Sueldo pendiente</th>
-      <th>Aux pendiente</th>
-      <th>Reajuste pendiente</th>
-      <th>Otros pendiente</th>
-      <th>Total pendiente</th>
-      <th>Nombres</th>
-      <th>Correo</th>
-      <th colspan="3">Acciones</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @liquidacions.each do |liquidacion| %>
-      <tr>
+<table border="1">
+  <tr>
+  <th>Fecha ini</th>
+  <th>Fecha fin</th>
+  <th>Cargo</th>
+  <th>Contrato</th>
+  <th>Termina</th>
+  <th>Salario</th>
+  <th>Auxilio</th>
+  <th>Horas ex diur</th>
+  <th>Horas ex noc</th>
+  <th>Recargos noc</th>
+  <th>Domi ordinarios</th>
+  <th>Horas ex domi diur</th>
+  <th>Horas ex domi noc</th>
+  <th>Otros</th>
+  <th>Concepto otros</th>
+  <th>Sueldo promedio</th>
+  <th>Prima extra</th>
+  <th>Valor mes</th>
+  <th>Valor día float</th>
+  <th>Valor hora</th>
+  <th>Recargo nocturno</th>
+  <th>Hora extra diurna</th>
+  <th>Hora extra nocturna</th>
+  <th>Hora ordinaria dominical</th>
+  <th>Hora extra dominical diurna</th>
+  <th>Hora extra dominical nocturna</th>
+  <th>Fecha ini vacas</th>
+  <th>Fecha fin vacas</th>
+  <th>Vacaciones</th>
+  <th>Indemniza art65</th>
+  <th>Indemniza art64</th>
+  <th>Calc art64</th>
+  <th>Check65</th>
+  <th>Fecha ini pactada</th>
+  <th>Fecha fin pactada</th>
+  <th>Num pro</th>
+  <th>Fecha ini pro1</th>
+  <th>Date</th>
+  <th>Fecha ini pro2</th>
+  <th>Fecha ini pro3</th>
+  <th>Fecha ini pro4</th>
+  <th>Fecha fin pro1</th>
+  <th>Fecha fin pro2</th>
+  <th>Fecha fin pro3</th>
+  <th>Fecha fin pro4</th>
+  <th>Fecha ini presta</th>
+  <th>Fecha fin presta</th>
+  <th>Cesantias</th>
+  <th>Inte cesantias</th>
+  <th>Prima</th>
+  <th>Total prestaciones</th>
+  <th>Sueldo pendiente</th>
+  <th>Aux pendiente</th>
+  <th>Reajuste pendiente</th>
+  <th>Otros pendiente</th>
+  <th>Total pendiente</th>
+  <th>Nombres</th>
+  <th>Correo</th>
+  </tr>
+  <% @liquidacions.each do |liquidacion| %>
+  <tr>
         <td><%= liquidacion.fecha_ini %></td>
         <td><%= liquidacion.fecha_fin %></td>
         <td><%= liquidacion.cargo %></td>
@@ -129,14 +119,6 @@
         <td><%= liquidacion.total_pendiente %></td>
         <td><%= liquidacion.nombres %></td>
         <td><%= liquidacion.correo %></td>
-          <td><%= link_to 'Mostrar', liquidacion , class: 'label label-info'%></td>
-        <td><%= link_to 'Editar', edit_liquidacion_path(liquidacion) , class: 'label label-success'%></td>
-        <td><%= button_to 'Eliminar', liquidacion, method: :delete,class: 'button', :onclick => "return confirm('¿Esta seguro de eliminar este registro?')" %></td> 
-      </tr>
-    <% end %>
-  </tbody>
+  </tr>
+  <% end %>
 </table>
-
-<br>
-
-<%= link_to 'Nueva Liquidación', new_liquidacion_path %>

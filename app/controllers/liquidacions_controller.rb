@@ -4,7 +4,16 @@ class LiquidacionsController < ApplicationController
   # GET /liquidacions
   # GET /liquidacions.json
   def index
-    @liquidacions = Liquidacion.all
+    @liquidacions = Liquidacion.order(:created_at)
+    respond_to do |format|
+      format.xls #{ send_data @tests.to_csv(col_sep: "\t"),filename: 'ListadoTest.xls'}
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"ListadoLiquidaciones.csv\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+      
+    end
   end
 
   # GET /liquidacions/1
@@ -28,7 +37,8 @@ class LiquidacionsController < ApplicationController
 
     respond_to do |format|
       if @liquidacion.save
-        format.html { redirect_to @liquidacion, notice: 'Liquidacion was successfully created.' }
+        UserMailer.bienvenidos_email(@liquidacion).deliver_now
+        format.html { redirect_to @liquidacion, notice: 'Liquidacion fue creado correctamente' }
         format.json { render :show, status: :created, location: @liquidacion }
       else
         format.html { render :new }
@@ -42,7 +52,7 @@ class LiquidacionsController < ApplicationController
   def update
     respond_to do |format|
       if @liquidacion.update(liquidacion_params)
-        format.html { redirect_to @liquidacion, notice: 'Liquidacion was successfully updated.' }
+        format.html { redirect_to @liquidacion, notice: 'Liquidacion fue modificada correctamente' }
         format.json { render :show, status: :ok, location: @liquidacion }
       else
         format.html { render :edit }
@@ -56,7 +66,7 @@ class LiquidacionsController < ApplicationController
   def destroy
     @liquidacion.destroy
     respond_to do |format|
-      format.html { redirect_to liquidacions_url, notice: 'Liquidacion was successfully destroyed.' }
+      format.html { redirect_to liquidacions_url, notice: 'Liquidacion fue eliminada' }
       format.json { head :no_content }
     end
   end
