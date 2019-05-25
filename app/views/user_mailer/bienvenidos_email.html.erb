@@ -314,14 +314,14 @@
                                       <tr>
                                         <td class="pc-fb-font" style="padding: 0 10px;" valign="top">
                                           <a
-                                            style="text-decoration: none; font-family: 'Roboto', Helvetica, Arial, sans-serif; font-size: 31px; font-weight: 500; color: #ffffff">Felicitaciones
+                                            style="text-decoration: none; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 31px; font-weight: 500; color: #ffffff">Felicitaciones
                                             <%= @liquidacions.nombres %></a>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td class="pc-xs-fs-30 pc-xs-lh-42 pc-fb-font pc-xs-br-disabled" style="padding: 13px 15px 0; letter-spacing: -0.1px; line-height:30px; font-family: 'Fira Sans', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 700; color: #ffffff"
                                         valign="top">
-                                          <table>
+                                          <table style="margin-left:30px">
                                             <tbody>
                                               <tr>
                                                 <th><span style="color: #cad147;">Descripción</span></th>
@@ -333,7 +333,7 @@
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Salario</td>
-                                                <td style=" padding: 0 10px;">$<%= @liquidacions.salario %></td>
+                                                <td style=" padding: 0 10px;">$<%= number_to_currency(@liquidacions.salario, unit: "$", separator: "'", delimiter: "") %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;" >Total pendiente</td>
