@@ -333,31 +333,31 @@
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Salario</td>
-                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.salario, precision: 2) %></td>
+                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.salario, precision: 0) %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;" >Total pendiente</td>
-                                                <td style=" padding: 0 10px;">$<%= @liquidacions.total_pendiente %></td>
+                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.total_pendiente, precision: 0) %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Total prestaciones</td>
-                                                <td style=" padding: 0 10px;">$<%= @liquidacions.total_prestaciones %></td>
+                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.total_prestaciones, precision: 0) %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Vacaciones</td>
-                                                <td style=" padding: 0 10px;">$<%= @liquidacions.vacaciones %></td>
+                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.vacaciones, precision: 0) %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Indemniza art64</td>
-                                                <td style=" padding: 0 10px;">$<%= @liquidacions.indemniza_art64 %></td>
+                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.indemniza_art64, precision: 0) %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Indemniza art65</td>
-                                                <td style=" padding: 0 10px;">$<%= @liquidacions.indemniza_art65 %></td>
+                                                <td style=" padding: 0 10px;"><%= number_to_currency(@liquidacions.indemniza_art65, precision: 0) %></td>
                                               </tr>
                                               <tr>
                                                 <td style=" padding: 0 10px;">Total</td>
-                                                <td style=" padding: 0 10px;"><span style="color: #cad147;"><%= @liquidacions.total %></span></td>
+                                                <td style=" padding: 0 10px;"><span style="color: #cad147;"><%= number_to_currency(@liquidacions.total, precision: 0) %></span></td>
                                               </tr>
                                             </tbody>
                                           </table>
