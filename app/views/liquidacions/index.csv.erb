@@ -54,8 +54,10 @@
 'Reajuste pendiente',
 'Otros pendiente',
 'Total pendiente',
+'Total',
 'Nombres',
-'Correo'] -%>
+'Correo',
+'Fecha creación'] -%>
 <%= CSV.generate_line headers %>
 <%- @liquidacions.each do |liquidacion| -%>
 <%= CSV.generate_line([liquidacion.fecha_ini ,
@@ -114,7 +116,9 @@ liquidacion.aux_pendiente ,
 liquidacion.reajuste_pendiente ,
 liquidacion.otros_pendiente ,
 liquidacion.total_pendiente ,
+liquidacion.total ,
 liquidacion.nombres ,
-liquidacion.correo]) -%>
+liquidacion.correo,
+liquidacion.created_at]) -%>
 <%- end -%>
 

@@ -56,8 +56,11 @@
   <th>Reajuste pendiente</th>
   <th>Otros pendiente</th>
   <th>Total pendiente</th>
+  <th>Total</th>
   <th>Nombres</th>
   <th>Correo</th>
+  <th>Fecha creación</th>
+
   </tr>
   <% @liquidacions.each do |liquidacion| %>
   <tr>
@@ -117,8 +120,11 @@
         <td><%= liquidacion.reajuste_pendiente %></td>
         <td><%= liquidacion.otros_pendiente %></td>
         <td><%= liquidacion.total_pendiente %></td>
+        <td><%= liquidacion.total %></td>
         <td><%= liquidacion.nombres %></td>
         <td><%= liquidacion.correo %></td>
+        <td><%= liquidacion.created_at %></td>
+
   </tr>
   <% end %>
 </table>

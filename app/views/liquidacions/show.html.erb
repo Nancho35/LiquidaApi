@@ -281,6 +281,11 @@
 </p>
 
 <p>
+  <strong>Total :</strong>
+  <%= @liquidacion.total %>
+</p>
+
+<p>
   <strong>Nombres:</strong>
   <%= @liquidacion.nombres %>
 </p>
@@ -289,6 +294,12 @@
   <strong>Correo:</strong>
   <%= @liquidacion.correo %>
 </p>
+
+<p>
+  <strong>Fecha creación:</strong>
+  <%= @liquidacion.created_at %>
+</p>
+
 
 <%= link_to 'Edit', edit_liquidacion_path(@liquidacion) %> |
 <%= link_to 'Back', liquidacions_path %>
