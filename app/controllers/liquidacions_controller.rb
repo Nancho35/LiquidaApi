@@ -6,7 +6,7 @@ class LiquidacionsController < ApplicationController
   def index
     @liquidacions = Liquidacion.order(:created_at)
     respond_to do |format|
-      format.xls #{ send_data @tests.to_csv(col_sep: "\t"),filename: 'ListadoTest.xls'}
+      format.xls #{ send_data @liquidacions.to_csv(col_sep: "\t"),filename: 'ListadoLiquidaciones.xls',encoding: 'ISO-8859-1'}
       format.html
       format.csv do
         headers['Content-Disposition'] = "attachment; filename=\"ListadoLiquidaciones.csv\""
