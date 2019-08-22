@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.5'
+gem "activerecord-oracle_enhanced-adapter"
+gem 'ruby-oci8', '~> 2.2', '>= 2.2.2'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'pg'
